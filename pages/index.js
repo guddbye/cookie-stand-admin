@@ -19,6 +19,7 @@ export default function Home() {
         <div>
             <Head>
                 <title>Cookie Stand Admin</title>
+                <link rel="icon" href="/cookie.ico" />
             </Head>
             <Header />
             <Main onSubmit={createCookieStandHandler} stringified = {str} />
@@ -29,15 +30,15 @@ export default function Home() {
 
 function Header() {
     return (
-    <header className='bg-emerald-500 text-4xl p-4 font-semibold'>
-        <h1>Cookie Stand Admin</h1>
+    <header className='bg-gray-500'>
+        <h2>cookie stand admin</h2>
     </header>
     );
 }
 
 function Main(props) {
     return (
-        <main className='bg-emerald-100 p-8 flex flex-col items-center space-y-8'>
+        <main className='bg-gray-500'>
             <CookieStandForm onSubmit={props.onSubmit}/>
             <ReportTable />
             <TableDataJSON stringified={props.stringified} />
@@ -47,41 +48,41 @@ function Main(props) {
 
 function Footer() {
     return (
-        <footer className='bg-emerald-500 text-lg text-gray-700 p-4 font-semibold'>
-            <p>&copy;2022</p>
+        <footer className='bg-gray-500'>
+            <p>&copy; Cookies</p>
         </footer>
     );
 }
 
 function CookieStandForm(props) {
     return (
-        <form onSubmit={props.onSubmit} className='text-center p-4 bg-emerald-300 w-3/5 font-semibold space-y-5 rounded-lg'>
-            <legend className='text-2xl'>Create Cookie Stand</legend>
+        <form onSubmit={props.onSubmit} className='bg-gray-500'>
+            <legend className='text-2xl'>create cookie stand</legend>
             <div className='text-center'>
                 <label className='flex w-full'> Location
-                    <input name='location' type='text' placeholder='Enter location name here...' className='ml-2 w-full'></input>
+                    <input name='location' type='text' placeholder='Location' className='ml-2 w-full'></input>
                 </label>
             </div>
             <div className='flex flex-auto space-x-5'>
-                <label className='flex flex-col w-full'> Minimum Customers per Hour
+                <label className='flex flex-col w-full'> Minimum Customer Per Hour: 
                     <input name='min' type='text' placeholder='0'></input>
                 </label>
-                <label className='flex flex-col w-full'> Maximum Customers per Hour
+                <label className='flex flex-col w-full'> Maximum Customers Per Hour:
                     <input name='max' type='text' placeholder='0'></input>
                 </label>
-                <label className='flex flex-col w-full'> Average Cookies per Sale
+                <label className='flex flex-col w-full'> Average Cookies Per Sale
                     <input name='avg' type='text' placeholder='0'></input>
                 </label>
-                <button type='submit' className='bg-emerald-500 px-24 py-4'>Create</button>
+                <button type='submit' className='bg-gray-500'>Create</button>
             </div>
         </form>
     );
 }
 
 function ReportTable() {
-    return <p>Report Table Coming Soon...</p>
+    return <p>********** TABLE HERE **********</p>
 }
 
 function TableDataJSON(props) {
-    return <p>{props.stringified}</p>
+    // return <p>{props.stringified}</p>
 }
