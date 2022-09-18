@@ -1,5 +1,5 @@
 ## cookie stand admin
-## lab 38 (react 1) 
-A reports table showing sales for each cookie stand location now displays if there is sales data to display. - The form allows new locations to be added to the reports table.
+## lab 39
+Connects with cookie-stand-api backend for authentication/authorization. - For testing use the following username/password: chloe/asdf - Cookie stand locations can be added using the form, which the backend stores. - The cookie stand table retrieves data from the backend.
 
 ## pull requests
