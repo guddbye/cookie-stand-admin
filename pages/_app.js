@@ -1,5 +1,6 @@
 import '../styles/globals.css'
 import { AuthProvider } from '../contexts/auth'
+import useSWR from 'swr'
 
 function MyApp({ Component, pageProps }) {
   return (

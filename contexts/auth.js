@@ -4,6 +4,8 @@ import axios from 'axios';
 const baseUrl = process.env.NEXT_PUBLIC_API_URL;
 const tokenUrl = baseUrl + '/api/token/';
 
+// Provided this code for assignment.
+
 const AuthContext = createContext();
 
 export function useAuth() {
